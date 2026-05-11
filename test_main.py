@@ -17,3 +17,9 @@ def test_zero_tip():
     result = calculate_tip(50, 0)
     assert result["tip"] == 0.0
     assert result["total"] == 50.0
+
+
+def test_round_up_per_person():
+    # $100 + 18% tip = $118 / 3 = $39.333... -> rounds up to $39.34
+    result = calculate_tip(100, 18, people=3, round_up=True)
+    assert result["per_person"] == 39.34
