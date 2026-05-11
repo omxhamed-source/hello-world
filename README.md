@@ -1,15 +1,30 @@
 # hello-world
 
-A simple hello world project to practise git workflows.
+A simple tip calculator CLI built in Python.
 
 ## Usage
 
-Clone the repo and run the script:
+```bash
+python main.py
+```
+
+Example:
+
+```
+=== Tip Calculator ===
+Bill amount: $80
+Tip percentage: 18
+Number of people: 2
+
+Tip:        $14.40
+Total:      $94.40
+Per person: $47.20
+```
+
+## Run tests
 
 ```bash
-git clone https://github.com/omxhamed-source/hello-world.git
-cd hello-world
-python main.py
+python -m pytest test_main.py
 ```
 
 ## Contributing
