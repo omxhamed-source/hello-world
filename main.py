@@ -1,7 +1,10 @@
-def calculate_tip(bill, tip_percent, people=1):
+def calculate_tip(bill, tip_percent, people=1, round_up=False):
     tip = bill * (tip_percent / 100)
     total = bill + tip
     per_person = total / people
+    if round_up:
+        import math
+        per_person = math.ceil(per_person * 100) / 100
     return {"tip": tip, "total": total, "per_person": per_person}
 
 
